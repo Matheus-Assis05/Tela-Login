@@ -1,0 +1,20 @@
+
+/*BOX DE LOGIN*/
+.box-login{
+    margin:220px  auto;
+    width:20%; 
+    padding: 20px;
+    text-align: center;
+    border:0.5px solid #333; /*LEVE MARGEM*/
+    background-image: linear-gradient(to right bottom, #8c52ff, #945bff, #9c63ff, #846cff, #8b74ff); /*GRADIENTE*/
+    border-radius: 7px; /*ARREDONDA OS CANTOS*/
+    justify-content: center;
+    /*EFEITO DE SOMBRA*/
+    box-shadow: 0px 0px 25px 9px rgba(0,0,0,0.4);
+    }
+.box-login form{
+      font-size: 25px;
+    }
+.box-login form input{
+      font-size: 25px;
+    }
