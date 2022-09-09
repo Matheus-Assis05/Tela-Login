@@ -1,12 +1,44 @@
-//https://itnext.io/how-to-build-a-floating-label-input-field-f9b21669fe2f
-const floatInput = document.querySelector('input')
-const float = document.querySelector('.float')
 
-floatInput.addEventListener('focus', () => {
-  float.classList.add('active');
-});
-floatInput.addEventListener('blur', () => {
-  float.classList.remove('active');
-}); 
+const FloatLabel = (() => {
+  
+  // adicionar classe .active
+  const handleFocus = (e) => {
+    const target = e.target;
+    target.parentNode.classList.add('active');
+  };
+  
+  // remover classe .active
+  const handleBlur = (e) => {
+    const target = e.target;
+    if(!target.value) {
+      target.parentNode.classList.remove('active');
+    }
+  };
+  
+  // registrar eventos
+  const bindEvents = (element) => {
+    const floatField = element.querySelector('input');
+    floatField.addEventListener('focus', handleFocus);
+    floatField.addEventListener('blur', handleBlur);    
+  };
+  
+  // aplicar aos elementos do DOM
+  const init = () => {
+    const floatContainers = document.querySelectorAll('.float');
 
-//ERRO: O CSS SO ALTERA 1 LABEL
+    floatContainers.forEach((element) => {
+
+      if (element.querySelector('input').value) {
+        element.classList.add('active');
+      }
+
+      bindEvents(element);
+    });
+  };
+  
+  return {
+    init: init
+  };
+})();
+
+FloatLabel.init();
