@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +11,22 @@
     <div class="box-login">
         <div class="logo">
             <img src="./img/logopit.jpg" alt="logo">
-            <figcaption>OnPoint</figcaption>
+            <figcaption>OnPoint - LogIn</figcaption>
         </div>
-        <form>
-            <label for="email">Email:</label>
-                <input type="email" name="" id="" placeholder="" required>
-            <label for="senha">Senha:</label>
-                <input type="password" name="" id="" placeholder="" required>
-
+        <form method="post">
+            <div class="float">   
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div> <br>
+            <div class="float"> 
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" required>
+            </div>
                 <button type="submit">LOGIN</button>
         </form>
         <a href="../Tela-Cadstro/index.html">Cadastrar-se</a>
     </div>
+
+    <script type="text/javascript" src="./visual.js"></script>
 </body>
 </html>
