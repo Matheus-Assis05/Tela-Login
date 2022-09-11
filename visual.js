@@ -2,13 +2,13 @@
 const FloatLabel = (() => {
   
   // adicionar classe .active
-  const handleFocus = (e) => {
+  const handleFocus = (e) => { //focus: input ativo
     const target = e.target;
     target.parentNode.classList.add('active');
   };
-  
+
   // remover classe .active
-  const handleBlur = (e) => {
+  const handleBlur = (e) => { //blur: "sair" do input
     const target = e.target;
     if(!target.value) {
       target.parentNode.classList.remove('active');
